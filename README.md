@@ -11,6 +11,6 @@ How to use:
   <li>Install the latest version of python from: https://www.python.org/downloads/
   <li>Select the "Add Python to PATH" checkbox during installation
   <li>Run the ```app.py``` file in command prompt on Windows or Terminal on Linux/UNIX using ```python3 app.py```
-  <li>Once the code is running, Open your browser and in the address bar, type: ``localhost:8000``
+  <li>Once the code is running, Open your browser and in the address bar, type: ```localhost:8000```
   <li>Now you can use the web application!
 </ol>
