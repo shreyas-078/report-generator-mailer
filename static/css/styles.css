@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;900&display=swap");
+
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-size: large;
+  background-color: rgb(246, 244, 235);
+}
+
+.header {
+  padding: 1rem;
+  background-color: rgb(70, 130, 169);
+  color: rgb(246, 244, 235);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.jss-logo {
+  height: 64px;
+  width: 64px;
+}
+
+.header-heading {
+  text-align: center;
+}
+
+#upload-excel {
+  border: 0.15rem solid rgb(70, 130, 169);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+#usn-from {
+  width: 10rem;
+  text-transform: uppercase;
+}
+
+#usn-to {
+  width: 10rem;
+  text-transform: uppercase;
+}
+
+.tools-heading {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-heading-main {
+  margin: 0;
+}
+
+.upload-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pdf-tools {
+  margin: 1rem;
+  /* border: 0.2rem solid black;
+  padding: 1rem;
+  border-radius: 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-helper-text {
+  text-align: center;
+}
+
+.tools-list {
+  display: flex;
+  padding: 0;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.mail-tools {
+  padding: 1rem;
+  border: 2px solid rgb(70, 130, 169);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.change-credentials-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.about-text {
+  text-align: center;
+}
+
+.btn {
+  transition: 0.3s;
+  width: 30rem;
+  height: 3rem;
+  background-color: rgb(246, 244, 235);
+  color: rgb(70, 130, 169);
+  border: 0.15rem solid rgb(70, 130, 169);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  background-color: rgb(70, 130, 169);
+  color: rgb(246, 244, 235);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+#shreyas-salankimatt {
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  transition: 0.3s;
+  width: 30rem;
+  height: 3rem;
+  background-color: rgb(246, 244, 235);
+  color: rgb(70, 130, 169);
+  border: 0.15rem solid rgb(70, 130, 169);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(70, 130, 169);
+  color: rgb(246, 244, 235);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: rgb(246, 244, 235);
+  border: 0.15rem solid rgb(70, 130, 169);
+  border-radius: 0.5rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  font-size: 1.5rem;
+}
+
+input[type="email"] {
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: rgb(246, 244, 235);
+  border: 0.15rem solid rgb(70, 130, 169);
+  border-radius: 0.5rem;
+}
+
+input[type="email"]:focus {
+  outline: none;
+  font-size: 1.2rem;
+}
+
+input[type="password"] {
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: rgb(246, 244, 235);
+  border: 0.15rem solid rgb(70, 130, 169);
+  border-radius: 0.5rem;
+}
+
+input[type="password"]:focus {
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.mail-part {
+  width: 30rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pass-part {
+  width: 30rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.enter-usn {
+  font-size: larger;
+}
+
+.about-text {
+  font-size: 18px;
+}
+
+.invisible {
+  display: none;
+}

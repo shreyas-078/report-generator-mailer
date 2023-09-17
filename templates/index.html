@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Generator Web</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}" />
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/JSS_Logo.png') }}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <section class="header">
+    <img src="{{ url_for('static', filename='images/JSS_Logo.png') }}" alt="jss-logo" class="jss-logo" />
+    <h1 class="header-heading">JSS Academy of Technical Education</h1>
+  </section>
+  <section class="main">
+    <h1 class="pdf-heading-main">PDF Report Generator</h1>
+    <h2 class="upload-heading">Upload your Excel file</h2>
+    <form id="upload-form" enctype="multipart/form-data">
+      <div class="upload-controls">
+        <input type="file" name="file" id="upload-excel" />
+        <input type="submit" value="Upload" />
+      </div>
+    </form>
+    <div id="upload-result"></div>
+    <section class="pdf-tools">
+      <h1 class="tools-heading">PDF Operations</h1>
+      <p class="enter-usn">Enter USN Range</p>
+      <div class="usn-range">
+        <lablel for="usn-from">USN From:</lablel>
+        <input type="text" id="usn-from">
+        <lablel for="usn-to">USN To:</lablel>
+        <input type="text" id="usn-to">
+      </div>
+      <ul class="tools-list">
+        <li class="tools-item"><button class="btn generate-pdf">Generate and Download PDFs for USN Range</button></li>
+        <p class="pdf-helper-text invisible"></p>
+        <li class="tools-item"><button class="btn mailer-pdf">Mail the Generated PDFs to respective Mail IDs</button></li>
+        <p class="mail-send-helper-text invisible"></p>
+        <li class="tools-item"><button class="btn change-sender-id-pass">Set Sender Email ID and Password</button></li>
+        <p class="mail-send-helper-text invisible"></p>
+        <div class="mail-tools invisible">
+          <h1 class="change-credentials-heading">Change Credentials</h1>
+          <div class="mail-part">
+            <label for="mail-id">Enter your mail ID</label>
+            <input type="email" id="mail-id">
+          </div>
+          <div class="pass-part">
+            <label for="mail-pass">Enter your App Password</label>
+            <input type="password" id="mail-pass">
+          </div>
+          <button class="btn set-mail-pass">Set Mail ID and Password</button>
+          <p class="mail-helper-text invisible"></p>
+          <button class="btn close-mail-tools">Close</button>
+        </div>
+        <li class="tools-item"><button class="btn about">About</button></li>
+      </ul>
+      <div class="about-div invisible">
+        <p class="about-text">This is a Web Application developed by <span id="shreyas-salankimatt">Shreyas Salankimatt.</span><br> It uses python and jQuery AJAX (Async Javascript and XML) to
+          generate PDF reports for individual students based on a given excel sheet.<br> It Utilizes SMTPLib (python) to send emails
+          and Flask (python) for web and backend processing and ReportLab (python) to generate PDFs.</p>
+      </div>
+    </section>
+  </section>
+</body>
+
+</html>
