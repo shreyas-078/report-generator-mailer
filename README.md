@@ -1,7 +1,7 @@
 <h1>Report Generator & Mailer</h1>
 A Web Application - PDF Report Generator using Flask and AJAX
 
-This is a web application which creates PDF reports for induvidual students based on an inputted Excel File - specifically made for JSS Academy of Technical Education, Bangalore
+This is a web application which creates PDF reports for induvidual students based on an inputted Excel File - specifically made for JSS Academy of Technical Education, Bangalore.<br>
 It is useful in academic settings where teachers needed to create separate performance reports for students and it was too cumbersome.
 This web application takes in an excel file with information of all students and their performance and attendance, and generates induvidual reports for each one.
 It can also mail the generated reports to emails associated to every student.
