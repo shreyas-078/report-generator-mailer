@@ -1,3 +1,6 @@
+# Fix Attendance to match total classes and classes attended
+# Fix S/D- Portion
+
 from flask import (
     Flask,
     render_template,
@@ -19,7 +22,10 @@ from email import encoders  # To add encoding to mail attachments
 import pandas as pd  # To Read Excel files
 from reportlab.lib.pagesizes import letter  # To create a new document with a template
 from reportlab.lib import colors  # For Colors
-from reportlab.lib.styles import ParagraphStyle  # To add paragraph styling
+from reportlab.lib.styles import (
+    ParagraphStyle,
+    getSampleStyleSheet,
+)  # To add paragraph styling
 from reportlab.platypus import (
     SimpleDocTemplate,
     Table,
@@ -28,6 +34,7 @@ from reportlab.platypus import (
     Image,
     Spacer,
 )  # Reportlab Utility for customization
+from reportlab.lib.units import inch
 
 mail_id = ""  # Mail ID variable
 
@@ -403,15 +410,44 @@ def make_pdf(filename, data_pdf, student_name, student_usn, current_stud):
         table.setStyle(style_report)
         story.append(table)
         story.append(spacer)
+
     story.append(spacer)
 
     remarks = f"<u>Remarks</u>: {data_pdf[current_stud + 1][36]}"
     remarks_para = create_paragraph(remarks, normal_style)
     story.append(remarks_para)
 
-    sign_details = "S/D- HOD, Dean Academics & Principal, JSSATEB"
-    sign_details_para = create_paragraph(sign_details, top_heading_style)
-    story.append(sign_details_para)
+    # Signatures
+    # Define the data for the table (1 row and 3 columns)
+    table_data = [["S/D-", "S/D-", "S/D-"]]
+
+    # Define the table style for center alignment
+    sd_table_style = TableStyle(
+        [
+            ("ALIGN", (0, 0), (-1, -1), "CENTER"),  # Center alignment for all cells
+            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),  # Middle vertical alignment
+            ("TEXTCOLOR", (0, 0), (-1, -1), colors.black),  # Text color
+            (
+                "FONTNAME",
+                (0, 0),
+                (-1, -1),
+                "Times-Roman",
+            ),  # Font name (adjust as needed)
+            ("FONTSIZE", (0, 0), (-1, -1), 14),  # Font size (adjust as needed)
+        ]
+    )
+
+    # Create the table with the defined data and style
+    table = Table(table_data, colWidths=[2.83 * inch, 2.83 * inch, 2.83 * inch])
+    table.setStyle(sd_table_style)
+
+    story.append(table)
+
+    table_data = [["Dean Academics", "HOD", "Principal"]]
+
+    table = Table(table_data, colWidths=[2.83 * inch, 2.83 * inch, 2.83 * inch])
+    table.setStyle(sd_table_style)
+    story.append(table)
     doc.build(story)
 
 
