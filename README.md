@@ -7,10 +7,9 @@ This web application takes in an excel file with information of all students and
 It can also mail the generated reports to emails associated to every student.
 
 How to use:
-<ol>
-  <li>Install the latest version of python from: https://www.python.org/downloads/
-  <li>Select the "Add Python to PATH" checkbox during installation
-  <li>Run the ```app.py``` file in command prompt on Windows or Terminal on Linux/UNIX using ```python3 app.py```
-  <li>Once the code is running, Open your browser and in the address bar, type: ```localhost:8000```
-  <li>Now you can use the web application!
-</ol>
+1. Install the latest version of python from: https://www.python.org/downloads/
+2. Select the "Add Python to PATH" checkbox during installation.
+3. Open the Terminal in the folder where the files are located.
+4. Run the ```app.py``` file in command prompt on Windows or Terminal on Linux/UNIX using ```python3 app.py```
+5. Once the code is running, Open your browser and in the address bar, type: ```localhost:8000```
+6. Now you can use the web application!
