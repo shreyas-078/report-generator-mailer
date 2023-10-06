@@ -1,5 +1,4 @@
-# Fix Attendance to match total classes and classes attended
-# Fix S/D- Portion
+# Fixed S/D- Portion
 
 from flask import (
     Flask,
