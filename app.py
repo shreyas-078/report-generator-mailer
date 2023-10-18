@@ -418,7 +418,7 @@ def make_pdf(filename, data_pdf, student_name, student_usn, current_stud):
 
     # Signatures
     # Define the data for the table (1 row and 3 columns)
-    table_data = [["S/D-", "S/D-", "S/D-"]]
+    table_data = [["S/d-", "S/d-", "S/d-"]]
 
     # Define the table style for center alignment
     sd_table_style = TableStyle(
