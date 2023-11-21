@@ -13,3 +13,5 @@ How to use:
 4. Run the ```app.py``` file in command prompt on Windows or Terminal on Linux/UNIX using ```python3 app.py```
 5. Once the code is running, Open your browser and in the address bar, type: ```localhost:8000```
 6. Now you can use the web application!
+
+NOTE: The reason why this application has not been converted into an actual production application and kept in a development environment is because it is unable to handle multiple connections, and is better off used on induvidual's computers as a local server
