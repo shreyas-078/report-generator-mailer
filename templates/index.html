@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}" />
   <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/JSS_Logo.png') }}">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/jQuery.js') }}" defer></script>
 </head>
 
 <body>
@@ -38,7 +38,8 @@
       <ul class="tools-list">
         <li class="tools-item"><button class="btn generate-pdf">Generate and Download PDFs for USN Range</button></li>
         <p class="pdf-helper-text invisible"></p>
-        <li class="tools-item"><button class="btn mailer-pdf">Mail the Generated PDFs to respective Mail IDs</button></li>
+        <li class="tools-item"><button class="btn mailer-pdf">Mail the Generated PDFs to respective Mail IDs</button>
+        </li>
         <p class="mail-send-helper-text invisible"></p>
         <li class="tools-item"><button class="btn change-sender-id-pass">Set Sender Email ID and Password</button></li>
         <p class="mail-send-helper-text invisible"></p>
@@ -59,8 +60,10 @@
         <li class="tools-item"><button class="btn about">About</button></li>
       </ul>
       <div class="about-div invisible">
-        <p class="about-text">This is a Web Application developed by <span id="shreyas-salankimatt">Shreyas Salankimatt.</span><br> It uses python and jQuery AJAX (Async Javascript and XML) to
-          generate PDF reports for individual students based on a given excel sheet.<br> It Utilizes SMTPLib (python) to send emails
+        <p class="about-text">This is a Web Application developed by <span id="shreyas-salankimatt">Shreyas
+            Salankimatt.</span><br> It uses python and jQuery AJAX (Async Javascript and XML) to
+          generate PDF reports for individual students based on a given excel sheet.<br> It Utilizes SMTPLib (python) to
+          send emails
           and Flask (python) for web and backend processing and ReportLab (python) to generate PDFs.</p>
       </div>
     </section>
