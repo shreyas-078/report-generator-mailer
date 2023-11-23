@@ -11,7 +11,6 @@ import os  # Path Operations
 import json  # JSON Operations
 import uuid  # Generate Unique Session ID
 import zipfile  # Create reports Zip File
-import time, threading, schedule  # Server Cleanup tools
 import smtplib  # Mailer
 from email.mime.multipart import MIMEMultipart  # Send Mail Features
 from email.mime.text import MIMEText
@@ -632,20 +631,6 @@ def create_zip_reports(session_id):
     return os.path.relpath(zip_filepath)
 
 
-# Schedule the cleanup task to run every day at 2 AM
-def schedule_cleanup_task():
-    schedule.every().day.at("02:00").do(clear_folders)
-
-
-# Every day at 2:00 am perform server cleanup
-def start_cleanup_thread():
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
-
-
 # Start the flask app
 if __name__ == "__main__":
-    cleanup_thread = threading.Thread(target=start_cleanup_thread)
-    cleanup_thread.start()
     app.run(host="0.0.0.0", port=8000)
