@@ -22,7 +22,6 @@ from reportlab.lib.pagesizes import letter  # To create a new document with a te
 from reportlab.lib import colors  # For Colors
 from reportlab.lib.styles import (
     ParagraphStyle,
-    getSampleStyleSheet,
 )  # To add paragraph styling
 from reportlab.platypus import (
     SimpleDocTemplate,
